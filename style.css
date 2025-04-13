@@ -1,0 +1,71 @@
+body {
+    margin-left: 0;
+    margin-right: 0;
+    /*background-color: rgb(243, 241, 217); da mettere con la funzione al cambio tema*/ 
+}
+
+#head {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#uscite {
+    text-align: center;
+    padding: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: gold;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#content {
+    margin-top: 50px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.prices {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.description {
+    text-align: center;
+}
+
+#footer {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#last {
+    background-color: rgb(243, 240, 240);
+    margin-top: 50px;
+}
+
+#modifiche  {
+    
+    width: 100%;
+}
+
+.sessantacinque {
+    width: 65%;
+}
+
+.invisible {
+    display: block;
+}

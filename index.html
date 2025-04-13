@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+</head>
+<body>
+    <header>
+        <div id="head">
+            <div>
+                <h1 id="titolo" onmouseover="cambiaH1()">
+                    Gli articoli di Patrick
+                </h1>
+            </div>
+            <div>
+                <img src="img/Screenshot 2025-04-12 104003.png" alt="tema" width="50px" height="55px" id="imgtema" onclick="cambiaTema()"><img src="img/luna.png" alt="luna" width="50px" height="55px" id="imgtema1" onclick="cambiaTema1()">
+            </div>
+        </div>
+    </header>
+
+    <h3 id="uscite">
+        Non perdere le nuove uscite!
+    </h3>
+
+    <button onclick="maglia()">
+        Mostra/nascondi immagini
+    </button>
+
+    <main id="content">    
+        <div id="main">
+            <div>
+                <img src="img/maglia-rossa.jpg" alt="magliarossa" width="350px" height="388px" class="invisible">
+                <h3>Maglia Rossa</h3>
+                <p class="description">Ideale anche per sport,<br> usala che è bellissima e non ti pentirai.</p>
+                <p class="prices" id="prezzo_0">€21,90</p>
+                <p class="description"><a target="_blank" href="https://www.amazon.it/Kariban-maniche-leggermente-attillata-XXX-Large/dp/B01M13XI8P/ref=sr_1_1_sspa?crid=2BK6P9W0N3QIH&dib=eyJ2IjoiMSJ9.pQm_NljZMAlYbAB7L3Lf4v6ZSLmOD3zB6jFSk_9khrc7bj0vS39T_3V0sD6-7XUvO99IlaNtdwajIHR0y53IM5sG6xyhVn3934DzZs-GbWA8-1OEBgAy9lpwGAYYPZFt3q0bxBhHjUuisAT4R6DqBgTQT3pr4jvAOhwN2nCGJJqRD4ZsyjbV5mjB7EaACE7W24-Ny8z2kaH565zN91UilZPUrdWy-BaZcbiq2-48gPsA0Nn93kTmxNISVxKZza_SyGO5DdQqRhcd8ztTWKAaDQPWH06EK9rPbjhy5BJkr6E.A4Cv3L4ph4uSIRxkAnh5aRMEWp9pZU4dm03K7E_T8GM&dib_tag=se&keywords=maglia+rossa+uomo&qid=1744447808&sprefix=maglia+rossa%2Caps%2C107&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1">Linketto maglia Amazon</a></p>
+            </div>
+            <div>
+                <img src="img/maglia-verde.jpg" alt="magliaverde" width="350px" height="388px" class="invisible">
+                <h3>Maglia Verde</h3>
+                <p class="description">Maglia Joma sportiva ideale per running <br> e walking.</p>
+                <p class="prices"id="prezzo_1">€6,99</p>
+                <p class="description"><a target="_blank" href="https://www.amazon.it/Joma-Combi-Maglietta-Unisex-Adulto/dp/B00J28D7FG/ref=sr_1_7?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1GFXO8EAG8DM&dib=eyJ2IjoiMSJ9.TKgo3GjNQiM9xfuiLeN__j1IVLDpEpPFuqdGr5gD2nQ4juLHem4qg0QrizPOV3YoHXYBtj9MuEwWfE4mOuFJSv_JHU9H8itgCmh-KHpqZInZsasWTorDd8goeLHBI-uCBNOFlJtQFoZIcWd5REYxwOU-TnnDLgLi_P5Loc8iIHDQ2Ys_HlQ7TlFCC5nTp9XwnbY2dVUpG9pMImSTDuAaDpVHfDc06qFK4xsQoTRECK8ReDyBBLynwJfqZMiTQKyCtQxRw-OjGaU5PXojoHYia_OeAAVBejr3taXoF7ODHOQ.Te7jscwKyM9CLoc2Sjgpy_SHLhUsIncQnkAaA_FQe9s&dib_tag=se&keywords=maglia+verde+uomo&qid=1744451577&sprefix=maglia+verde+uomo%2Caps%2C143&sr=8-7">Linketto maglia Amazon</a></p>
+            </div>
+            <div>
+                <img src="img/maglia-gialla.jpg" alt="magliagialla" width="350px" height="388px"class="invisible">
+                <h3>Maglia Gialla</h3>
+                <p class="description">Maglia Puma sportiva,<br> adatta per i tornei estivi.</p>
+                <p class="prices"id="prezzo_2">€19,99</p>
+                <p class="description"><a target="_blank" href="https://www.amazon.it/PUMA-Teamgoal-Casuals-Unisex-Adulto-Veloce/dp/B0C4PRZ786/ref=sr_1_12?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3DARR3UPBXUIT&dib=eyJ2IjoiMSJ9.P3Po-zQvQOS93ohXPdF67lwDY6ntVSS855aKjOPPUn3afpIR6RQ8jpbR7ubGIb-8tuVf7pTt1NAEY-dKFrnhCJH3mMKXnIOQPF_kOPBOHGCV-fPhFd8FZV5jbejcEIzMq2obQ3aDQO_j_PdmdDG3rUx-Vu18gZLMNVJNdJHJR0ntYvtaztGcYknv2_oJtB_ODgtG1rOfFiCswjmQUDi3MFmuu_MPDnlQm8BHP5lGWRdl4htnNA-IB5kuBYkAklGFNZerS0zb6pPv8_TcSoIF8gk8rLsQr4mJtxiVi1jdqCE.qVqsuDlVVlrvXvgWyGNyIfuBp8wXJPMBKv1GSP2qV9k&dib_tag=se&keywords=maglia+gialla+uomo&qid=1744452081&sprefix=maglia+gialla+uomo%2Caps%2C136&sr=8-12">Linketto maglia Amazon</a></p>
+            </div>
+            <div>
+                <img src="img/maglia-blu.jpg" alt="magliablu" width="350px" height="388px" class="invisible">
+                <h3>Maglia Blu</h3>
+                <p class="description">Maglia Jack e Jones casual, <br> adatta per uscire con gli amici.</p>
+                <p class="prices"id="prezzo_3">€10,10</p>
+                <p class="description"><a target="_blank" href="https://www.amazon.it/JACK-JONES-Jjecorp-T-Shirt-Blazer/dp/B079BWLFL2/ref=sr_1_14?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2W12AHCRT8GKZ&dib=eyJ2IjoiMSJ9.tBMTHQTn1xE5DegHqdO6qstqSNm3KfqZLC6xj_X4sovC_zfF4PYM5VWv2s3ROLj71HQpmUWsmV_euUtOwUZ6cx92h5nHwAj8MBdmo1g5esMcXj8G-qhviesvV9oxA3x7bLczRaH4U5Oi3v_bpskIiGRHzZNgDIOJPgeHMaj17nDVtdyIFwmukabGdNliCgONwxL7mmbKgqiPl8kgjfyZr4Gmk9q2u8eZDN42Liw4R5iJqPko2bKs6_3EwRhES0dSH8KIt0e3WFtP7taVPi9zob0ZhZ20HNSMDgrPZPsBA-w.mOpPTaRim1xiaQtcaSebdTH5pehHBzqbgeE6BjGBxs0&dib_tag=se&keywords=maglia+blu+uomo&qid=1744452250&sprefix=maglia+blu+uomo%2Caps%2C151&sr=8-14">Linketto maglia Amazon</a></p>
+            </div>
+            <div>
+                <img src="img/maglia-rosa.jpg" alt="magliarosa" width="350px" height="388px" class="invisible">
+                <h3>Maglia Rosa</h3>
+                <p class="description">Maglia rosa Kefitevd, indossabile per abbigliamento <br> sporivo, casual.</p>
+                <p class="prices"id="prezzo_4">€24,98</p>
+                <p class="description"><a target="_blank" href="https://www.amazon.it/KEFITEVD-allenamento-asciugatura-traspirante-funzionale/dp/B09WRGZDTV/ref=sr_1_4_sspa?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2S78EBM119423&dib=eyJ2IjoiMSJ9.4rtfjDSekkYHOvSAAii2k47ug6dPqW0dj6nMbgTltCyErqMuJsMTLVxiv6CMbCcJvfePy3VZfmCQjoc1K-Q6eE0xaXa6FH93dbBWBFBQFlg9TEsyiFUuGWHly0QB6E137eQ3VtHUprxB11ZnKu5DHLPLjXHZYksZCCxBqcNds8Duq38EcPxWbELlWnLhBIW5e5IJH1gfAEU26D-GPY40AXUpdOvN5jpTJ9ShgRUrXrD4FYHj1A9sYluWbm4qh7oMXKlBYrzp8tvjhclCKwUvnrDVAZ7EqM2wWk4LqNyyIdg.WcGemxtTIAn-iqMM_y3JEqXsSewVmAptW0iMMZr2i-s&dib_tag=se&keywords=maglia%2Brosa%2Buomo&qid=1744452401&sprefix=maglia%2Brosa%2Buomo%2Caps%2C139&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1">Linketto maglia Amazon</a></p>
+            </div>
+        </div>
+    </main>
+
+    <h3>
+        <button onclick="cambiaColorePrezzi()">
+            Cambia colore prezzi
+        </button>
+    </h3>
+
+    <h3>
+        <button onclick="nuovaClasse()">
+            Add Class link!
+        </button>
+    </h3>
+
+
+    <footer id="last">
+        <div id="footer">
+            <div>
+                <h2>Info negozio</h2>
+                <p><i>"Gli articoli di Patrick"</i></p>
+                <p id="nuovoIndirizzo" onclick="cambiaIndirizzo()"><i>Via Gratteri 12, 00000, Milano, MI</i></p>
+            </div>
+            <div class="sessantacinque">
+                <h2>Lascia un commento!</h2>
+                <textarea name="commento" placeholder="Cosa ne pensi?" id="modifiche"></textarea>
+                <button>Invia</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
